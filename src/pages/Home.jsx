@@ -84,7 +84,7 @@ export default function HomePage() {
         gsap.fromTo(modalRef.current, { scale: 0.93, opacity: 0, y: 20 }, { scale: 1, opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.4)" });
     });
     try {
-      const res = await fetch(`${import.meta.env.HF_SERVER}/api/summarize`, {
+      const res = await fetch(`${import.meta.env.VITE_HF_SERVER}/api/summarize`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: note.body }),
