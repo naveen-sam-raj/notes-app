@@ -6,13 +6,7 @@ import axios from "axios";
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: [
-    "https://note-app-abff1.web.app",
-    "https://note-app-abff1.firebaseapp.com",
-    /^http:\/\/localhost:\d+$/,
-  ],
-}));
+app.use(cors());
 app.use(express.json());
 
 app.post("/api/summarize", async (req, res) => {
